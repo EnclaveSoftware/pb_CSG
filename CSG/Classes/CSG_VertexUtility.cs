@@ -178,6 +178,9 @@ namespace Parabox.CSG
         /// <param name="vertices">The vertices to replace the mesh attributes with.</param>
         public static void SetMesh(Mesh mesh, IList<CSG_Vertex> vertices)
         {
+            if (vertices.Count == 0)
+                return;
+
             if (mesh == null)
                 throw new ArgumentNullException("mesh");
 
